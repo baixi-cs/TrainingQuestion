@@ -1,74 +1,75 @@
-package com.cogent.hw3;
-
-import java.util.List;
+package com.cogent.interfacedemo;
 
 public class HW3Test {
+
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-//		Find Solutions for following Questions and  ,Be ready with working of the solution you created.
-//
-//
-//		DS1.3. Find Bigger number among two 
 		HW3 hw3 = new HW3();
+		String s = "hello word";
+		String s2 = "racecar";
 		
-		int num1 = 20; 
-		int num2 = 35;
-		int num3 = 10;
+//		1. Find All substring of string in java Program
+		hw3.findSubStr(s);
+//		String subStr = hw3.findSubStr2(s);
+//		System.out.println(subStr);
 		
 		
+//		2. Print reverse string in java Program
+		String reverseStr = hw3.reverseStr(s);
+		System.out.println("Q2 reverse str: " + reverseStr);
 		
-		int biggerNum = hw3.findBiggerNum(num1, num2);
-		System.out.println("q1.3: biggerNum = "+biggerNum);
 		
-//		DS1.4. Swap two number 
-		hw3.swap2Num(num1, num2);
+//		3. Check Given No is palindrome or Not in java Program
+		boolean isPalindrome = hw3.isPalindrome(s2);
+		System.out.println("Q3 str: " + s2 + " isPalindrome = "+ isPalindrome);
 		
-//		DS1.5. Swap two numbers without using extra variable 
-		hw3.swap2NumWithoutExtraVarible(num1, num2);
-//		DS1.6. Check number is even or odd using ternary operatsor
-		boolean isEven = hw3.checkEven(num1);
-		System.out.println("q1.6: num1 = "+ num1 +"is even = "+isEven);
-		isEven = hw3.checkEven(num2);
-		System.out.println("q1.6: num1 = "+ num2 +"is even = "+isEven);
-//		DS1.7. Find Bigger number among three numbes
-		int biggestNum = hw3.findBiggest3Num(num1, num2, num3);
-		System.out.println("q1.7: Bigger number among three numbes =  "+ biggestNum);
+		boolean isPalindrome2 = hw3.isPalindrome(s);
+		System.out.println("Q3 str: " + s + " isPalindrome = "+ isPalindrome2);
 		
-//		DS1.8. Find a character is vowel or consonant
-		boolean isVowel1 = hw3.checkVowel('c');
-		boolean isVowel2 = hw3.checkVowel('Y');
-		boolean isVowel3 = hw3.checkVowel('I');
-		System.out.println("q1.8: character is vowel or consonant =  "+ isVowel1+isVowel2+isVowel3);
 		
-//
-//		Added 2 more Questions:
-//
-//		Q1: Write a method that accepts an array and return the second min and max number.
-		int [] arr = {4,8,12,5,0};
-		
-//		int min = hw3.findMin(arr);
-//		int max = hw3.findMax(arr);
-//		System.out.println("q2.1 second min and max number =  "+ min+max);
-		hw3.findSecMinAndMax(arr);
-//
-//		Q2: Write a method that accepts two string arguments and returns true if they are anagram and false if they are not. An anagram is when all the letters in one string exist in another but the order of letters does not matter.
-//		Two question asked in walmart.
-		String s1 = "listen";
-		String s2 = "lient";
-//		List<Character> s1Arr = hw3.str2CharList(s1);
-//		List<Character> s2Arr = hw3.str2CharList(s2);
-		boolean isAnagram = hw3.checkAnagram(s1, s2);
-		System.out.println("q2.2 two string are anagram =  "+ isAnagram);
-				
-//
-//
-//
-//		Note: Upload Solution to Git Hub,Update Once Done.
-//		Also be ready to explain working of the code.
-		
+//		4. How to add two matrix in java Program
+		int[][] a = {{1, 2, 3}, {4, 5, 6}, {7, 8, 9}};
+        int[][] b = {{10, 11, 12}, {13, 14, 15}, {16, 17, 18}};
+        int[][] res = hw3.add2Matrix(a, b);
+        System.out.println("Q4 add two matrix: ");
+        hw3.printMatrix(res);
+       
+       
+//		5. How to multiply two matrix in java Program
+//        int[][] c = {{1,2}, {3,4}, {5,6}};
+        
+        System.out.println("Q5 multiply two matrix: ");
+        hw3.multiply2Matrix(a, b);
+        
+     
+//		6. How to replace string with another string in java Program
+        String originStr = "i am an original string for question six.";
+        String searchStr = "origin";
+        String newString = hw3.replaceStr(originStr, searchStr, "REPLACE");
+       
+        System.out.println("Q6 New string: " + newString);
+     
 
-
-
+//		7. How to Generate random number in java Program
+        int randNum = hw3.randNum(300, 1200);
+        System.out.println("Q7 random number: " + randNum);
+        
+        
+//		8. Binary search Program in java
+        int[] arr = {234, -21, 89, 533, 92, 7, -88, 239};
+        
+        int idx = hw3.binarySearch(arr, 7);
+        System.out.println("Q8 binary search 7: " + idx);
+        int idx2 = hw3.binarySearch(arr, -5);
+        System.out.println("Q8 binary search -5: " + idx2);
+        
+        
+//		9. How to create Method Overriding program in java
+        hw3.overridingMethod();
+        
+		
+		
+		
 	}
-
+	
 }
