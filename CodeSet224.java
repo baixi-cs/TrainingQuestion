@@ -111,7 +111,7 @@ public class CodeSet224 {
 				stackList.push('}');
 			}else if(c == '[') {
 				stackList.push(']');
-			}else if(stackList.isEmpty() || stackList.pop() != 'c'){
+			}else if(stackList.isEmpty() || stackList.pop() == 'c'){
 				return false;
 			}
 		}
