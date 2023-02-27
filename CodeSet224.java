@@ -102,20 +102,22 @@ public class CodeSet224 {
 //ii) {()}[] – Valid
 
 	public boolean checkValid(String s) {
-		char[] arr = s.toCharArray();
-		Stack<Character> stackList = new Stack<Character>();
-		for(char c:arr) {
-			if (c == '(') {
-				stackList.push(')');
-			}else if (c == '{') {
-				stackList.push('}');
-			}else if(c == '[') {
-				stackList.push(']');
-			}else if(stackList.isEmpty() || stackList.pop() == 'c'){
-				return false;
+		char[] arr = s.toCharArray();//
+		Stack<Character> stack = new Stack<Character>(); 
+		for(char c: arr) { //(){()[])}
+			if (c == '(' || c == '{' ||c == '[') {
+				stack.push(c);// )
 			}
-		}
-		return stackList.isEmpty();
+			else {
+				if(stack.isEmpty() ||
+                			c == ')' && stack.pop() != '(' ||
+                			c == ']' && stack.pop() != '[' ||
+                			c == '}' && stack.pop() != '{') { 
+						return false;
+                			}
+				}
+			}
+		return stack.isEmpty();
 	}
 	
 
