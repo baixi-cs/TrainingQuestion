@@ -13,7 +13,7 @@ public class Coding310 {
 		
 		for(int i= 0; i < rows; i++) {
 			for(int j= 0; j <cols; j++) {
-				System.out.print(mat[i][j]+ ",");
+				System.out.print("\t"+ mat[i][j]+ "\t");
 			}
 			System.out.println();
 		}
@@ -157,7 +157,7 @@ public class Coding310 {
 		for(int i= 0; i < rows; i++) {
 			for(int j= 0; j <cols; j++) {
 				if(i == 0 || j == 0 || i == rows-1 || j == rows -1) {
-					System.out.print(mat[i][j]+ ",");	
+					System.out.print("\t"+ mat[i][j]+ "\t");	
 				}
 			}
 			System.out.println();
