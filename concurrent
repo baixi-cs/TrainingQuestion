@@ -1,0 +1,26 @@
+Executor
+The Executors class has several methods for the classes of the Executor Framework such as ExecutorService, Executor, Callable, ScheduledExecutorService, etc. We can directly use the ThreadPoolExecutor and ScheduledThreadPoolExecutor, but it is not the best way. The best way of getting an executor is to use the static factory methods of the utility class. 
+
+ExecutorService
+The ExecutorService interface takes the support of the Executor interface and allows us to manage termination and methods that return Future objects to track the progress of more than one asynchronous task by providing several methods.
+The Submit method of the ExecutorService interface is more versatile compared to others. The submit accepts not only runnable objects but also Callable objects too
+ScheduledExecutorService
+The ScheduledExecutorService interface plays a very important role in Java concurrency. This interface takes the support of the Executor interface and provides methods for scheduling the command to execute periodically or to run after a given time.
+
+Future
+Future is also an interface that is mainly used to represent the outcome of the asynchronous task. The Future object is returned by the Submit() method of the ExecutorService. The future interface provides several methods for checking whether the computation is complete or not, for waiting for its completion, and for retrieving the result of the computation.
+
+CountDownLatch
+The Countdownlatch is a synchronizer in Java that allows one thread to wait for one or more threads before starting processing. It plays an important role in server-side Java applications.
+If one or more events are used in other threads, and we want to use those events in the currently executing thread, we can push that thread in the waiting state by using Countdownlatch until the threads that are using those events are not complete.
+
+CyclicBarrier
+The Cyclicbarrier concept is also used to set the thread in the waiting state. The Cyclicbarrier sets the thread in the waiting state for each other to reach a common barrier point. On the Cyclicbarrier object, we need to call the await() method when each thread reaches the barrier.
+
+Semaphore
+The Semaphore is a class that is present in the concurrent package of Java.util. It is basically a semaphore that maintains a set of permissions.
+The thread uses acquire() method for acquiring permits to get access to the shared resource. At the same time, if the value of the Semaphore's count is not equal to 0, the count value of the Semaphore will be decremented by one and acquire a permit. Else the thread will be blocked until a permit is available. The thread uses the release() method to release the shared resources when it is done with it.
+
+Phaser
+Phaser plays an important role in the synchronization of threads over one or more than one phase of activity. The Phaser acts like Cyclicbarrier when it is used for synchronizing the single phase. It is very flexible and reusable in usage.
+
